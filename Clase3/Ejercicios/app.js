@@ -64,5 +64,24 @@ document.body.innerHTML += `
 
 escribir("Titulo dinámico", "Este contenido fue generado desde JS.");
 
+//Ejercicio 6
+
+//Selecciono el botón
+
+const boton = document.getElementById('crear');
+
+//Agrego el evento 'click' al botón 
+
+boton.addEventListener ('click', function(){
+    //crear un nuevo <p>
+    const nuevoParrafo = document.createElement('p');
+    //creando un nodo de texto dinamico 
+    const texto = document.createTextNode(`Párrafo creado el ${new Date().toLocaleTimeString()}`);
+    //Insertando el texto en el <p>
+    nuevoParrafo.appendChild(texto);
+    //Agregar el <p> al body
+    document.body.appendChild(nuevoParrafo);
+});
+
 
 
