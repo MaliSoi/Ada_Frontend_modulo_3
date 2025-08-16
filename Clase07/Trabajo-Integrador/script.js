@@ -21,6 +21,15 @@ if(tareasGuardadas){
 }
 });
 
+/*document.addEventListener("DOMContentLoaded", () => {
+const tareasGuardadas = sessionStorage.getItem("tareas");
+if(tareasGuardadas){
+    tareas = JSON.parse(tareasGuardadas);
+    mostrarTareas();
+}
+});*/
+
+
 //Escuchar el evento del submit del form
         formulario.addEventListener("submit", (e) => {     //evita que la página se recargue al enviar el form
         e.preventDefault();    
@@ -123,6 +132,10 @@ if(tareasGuardadas){
 
 //Función para guardar tareas en localStorage
 function guardarTareas(){
-    localStorage.setItem("tareas", JSON.stringify(tareas));
+   localStorage.setItem("tareas", JSON.stringify(tareas));
  }
 
+//Función para guardar tareas en sessionStorage
+/*function guardarTareas(){
+    sessionStorage.setItem("tareas", JSON.stringify(tareas));
+ }*/
