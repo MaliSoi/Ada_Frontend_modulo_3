@@ -33,8 +33,6 @@ if(tareasGuardadas){
             alert('Por favor, escribe una tarea antes de agregarla.');
             return;
         }
-
-
         //Creo objeto tarea 
         const tareaNueva = {
             id: Date.now(),     //id único que se basa en timestamp
@@ -59,10 +57,21 @@ if(tareasGuardadas){
 
     function mostrarTareas() {
         listaTareas.innerHTML = ""; //limpiar lista antes de mostrar
+        
+        //Obtener los parámetros de la URL
+        const params = new URLSearchParams (window.location.search);
+        const categoriaFiltrada = params.get("categoria");
 
-        let tareasMostrar = tareas;
+        //Filtramos tareas según categoría (si hay filtro)
+        let tareasAMostrar = tareas;
+        if(categoriaFiltrada && categoriaFiltrada !== "") {
+            tareasAMostrar = tareas.filter(tarea => tarea.categoria === categoriaFiltrada);
+            console.log(`Filtrando por: ${categoriaFiltrada}`);
+        }
 
-            tareasMostrar.forEach (tarea => {
+           //Recorremos el array filtrado para mostrar las tareas
+
+            tareasAMostrar.forEach (tarea => {
             const div = document.createElement("div");   //Creo un contenedor para la tarea un <div>
             const p = document.createElement("p");       //creo un elemento <p> para mostrar la tarea 
             p.textContent = `${tarea.texto} - Categoría:${tarea.categoria}`;   //texto para que combine con la tarea y la categoría
@@ -81,11 +90,26 @@ if(tareasGuardadas){
             //Agrego el <p> y los botones al contendor de la lista de tareas
             div.appendChild(p);
             div.appendChild(btnEliminar);
-            //Agrego la tarea completa (div) a la lista de tareas
-            listaTareas.appendChild(div);
+
+            // 👉 ESTO FALTABA
+        listaTareas.appendChild(div);
+
         });
     }
     
+    // Función que activan los botones de filtro
+    function filtrarPorCategoria (categoria) {
+        const url = new URL(window.location);
+        if(categoria){
+            url.searchParams.set("categoria", categoria);
+        }else {
+            url.searchParams.delete("categoria");
+        }
+        window.history.pushState({},"", url); //cambia la URL sin recargar
+        mostrarTareas();
+        }
+    
+
 
     //Botón para eliminar todas las tareas
     btnBorrarTodas.addEventListener("click", () => {
@@ -97,8 +121,8 @@ if(tareasGuardadas){
         }
     });
 
+//Función para guardar tareas en localStorage
 function guardarTareas(){
     localStorage.setItem("tareas", JSON.stringify(tareas));
-
  }
 
