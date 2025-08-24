@@ -11,9 +11,44 @@
 </head>
 
 <body>
-    
-    <!--header-->
-    
+
+    <!--Navbar-->
+
+    <nav class="navbar is light" role="navigation" aria-label="main-navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item has-text-weight-bold is-size-4">
+                <i class="fas fa-palette mr-2"></i>
+                Malala's Tienda
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasic" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="#inicio" class="navbar-item">Inicio</a>
+                <a href="#estampas" class="navbar-item">Estampas</a>
+                <a href="#contacto" class="navbar-item">Contacto</a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Login</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Header Hero section-->
+
     <section class="section has-background-light ">
         <div class="container">
             <h1 class="title is-size-2 has-text-centered ">
@@ -25,15 +60,15 @@
         </div>
     </section>
 
-    <!--Introduction-->
-    <section id="introduccion" class="section" style="padding-top: 10rem; padding-bottom: 2rem;">
+    <!-- Introduction Section -->
+
+    <section id="inicio" class="section padding-top: 10rem; padding-bottom: 2rem;">
 
         <div class="container">
             <div class="columns">
 
-      <!--Title & Subtitle-->          
-                <div class="columns is-mobile is-multiline is-centered column">
-                    <div class="column is-one-third mr-6">
+                <!--Title & Subtitle-->
+                    <div class="is-centered column is-full-mobile is-half-tablet is-one-third-desktop mr-6">
                         <p class=" Text has-text-justified has-text-weight-regular is-size-5 is-family-sans-serif ">Soy
                             <strong>Malala Soifer, diseñadora de estampados y artista</strong>.
                             Esta es mi nueva tienda, un espacio donde reúno mis creaciones: aquí encontrarán productos
@@ -42,9 +77,10 @@
                         </p>
                     </div>
 
-                    <!-- Image -->
-                    <div class="column is-one-quarter">
-                        <figure class="image">
+                  
+                     <!-- Image con OFFSET para desplazar -->
+                <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop is-offset-1-desktop">
+                    <figure class="image">
                             <img src="./images/flor.jpg" />
                         </figure>
                     </div>
@@ -54,25 +90,24 @@
 
     <!-- Product cards section -->
 
-    <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+    <section id="estampas" class="section padding-top: 2rem; padding-bottom: 2rem;">
         <div class="container">
             <div class="columns is-multiline is-centered">
 
                 <!-- First card -->
-                <div class="column is-one-third">
+                 <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
                     <div class="card">
-                         <!-- Image -->
+                        <!-- Image -->
                         <div class="card-image">
                             <figure class="image is-4by3">
-                                <img src="./images/DIBUJO I-04.jpg" alt="flower image">
+                                <img src="./images/DIBUJO I-04.jpg" alt="diseño de flores">
                             </figure>
                         </div>
-
-                         <!-- Content -->
+                        <!-- Content -->
                         <div class="card-content">
                             <div class="media">
                                 <div class="media-content">
-                                    <p class="title is-5">Flower Design</p>
+                                    <p class="title is-5">Diseño de flores</p>
                                 </div>
                             </div>
                             <div class="content">
@@ -80,7 +115,6 @@
                                 primavera o verano.
                                 <a>@malalasoifer</a> <a href="#">#prints</a> <a href="#">#design</a>
                             </div>
-
                             <!--Button -->
                             <div class="card">
                                 <footer class="card-footer">
@@ -92,7 +126,7 @@
                 </div>
 
                 <!-- Second card -->
-                <div class="column is-one-third">
+                 <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
                     <div class="card">
                         <!-- Image -->
                         <div class="card-image">
@@ -105,11 +139,12 @@
                         <div class="card-content">
                             <div class="media">
                                 <div class="media-content">
-                                    <p class="title is-5">Rainbow Design</p>
+                                    <p class="title is-5">Diseño Arco Iris</p>
                                 </div>
                             </div>
                             <div class="content">
-                                Un patrón dinámico en tonos vibrantes perfecto para proyectos modernos y llamativos que buscan destacar
+                                Un patrón dinámico en tonos vibrantes perfecto para proyectos modernos y llamativos que
+                                buscan destacar
                                 por su colorido.
                                 <a>@malalasoifer</a> <a href="#">#prints</a> <a href="#">#design</a>
                             </div>
@@ -124,10 +159,147 @@
                     </div>
                 </div>
 
+
+                <!-- Third card -->
+                <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
+                    <div class="card">
+                        <!-- Image -->
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="./images/Dibujo H-02.jpg" alt="FlowFlores y lunares">
+                            </figure>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-5">Flores y Lunares</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Este patrón combina elementos florales estilizados con formas geométricas. Especialmente para proyectos que busquen un toque
+                                juvenil y vibrante.
+                                <a>@malalasoifer</a> <a href="#">#prints</a> <a href="#">#design</a>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="card">
+                                <footer class="card-footer">
+                                    <a href="#" class="card-footer-item">Comprar</a>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+ <!-- Contact Form Section -->
+<section id="contacto" class="section has-background-light">
+        <div class="container">
+            <div class="columns">
+                <!-- Información de contacto -->
+                <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
+                    <h2 class="title is-3">Contacto</h2>
+                    <p class="content">
+                        ¿Tienes alguna pregunta sobre nuestros diseños? ¡Escríbenos! Estaremos encantados de ayudarte.
+                    </p>
+                    <div class="content">
+                        <p>
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <span>malala@tienda.com</span>
+                            </span>
+                        </p>
+                        <p>
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                                <span>+54 11 1234-5678</span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+<!-- Formulario -->
+                <div class="column is-full-mobile is-half-tablet is-two-thirds-desktop">
+                 <form id="contactForm">
+                       <div class="field">
+                       <label class="label">Nombre</label>
+                       <div class="control has-icons-left">
+                       <input id="firstName" class="input" type="text" placeholder="Tu nombre completo" required>
+                       <span class="icon is-small is-left"> <i class="fas fa-user"></i></span>
+                      </div>
+                </div>
+
+                <div class="field">
+                       <label class="label">Email</label>
+                       <div class="control has-icons-left">
+                       <input id="email"class="input" type="email" placeholder="tu@email.com" required>
+                       <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+                       </div>
+                       <p id="emailHelp" class="help"></p>
+                </div>
+
+                <div class="field">
+                        <label class="label">Mensaje</label>
+                        <div class="control">
+                        <textarea id="projectDescription" class="textarea" placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea>
+                        </div>
+                </div>
+
+                <div class="field is-grouped">
+                        <div class="control">
+                        <button class="button is-primary is-medium" type="submit">
+                        <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                        <span>Enviar Mensaje</span>
+                        </button>
+                        </div>
+                </div>
+               </form>
+              </div>
+               </div>
             </div>
         </div>
     </section>
-  
+
+    <!-- Botón de Peligro en un Box -->
+    <section class="section">
+        <div class="container">
+            <div class="box has-text-centered">
+                <button class="button is-danger is-outlined">
+                    <span class="icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                    <span>Acción Peligrosa</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <footer class="footer has-text-centered social-links">
+     <div class="content has-text-centered">
+     <p><strong>Malala's Tienda</strong> by <a href="#">Malala Soifer</a>. 
+     Todos los derechos reservados © 2025</p>
+     <div class="icons">
+                <a href="https://www.instagram.com/malalasoifer/" target="_blank"  class="mr-4">
+                <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://www.behance.net/MalalaSoifer" target="_blank">
+                <i class="fab fa-behance fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
 
     <script src="/Clase10/Ejercicio-09/script.js"></script>
 
