@@ -8,8 +8,8 @@ const estudiante = {
 };
 
 //Usa desestructuración para obtener nombre y edad en variables separadas.
-const { nombre, edad } = estudiante;
-console.log(nombre, edad);
+//const { nombre, edad } = estudiante;
+//console.log(nombre, edad);
 
 //Cambia el nombre de la variable carrera a profesion.
 const { carrera: profesión } = estudiante;
@@ -35,26 +35,29 @@ console.log(color3);
 
 console.log(otrosColores);
 
+
 //Actividad 3 - Spread y Rest en funciones
 
 const persona = { nombre: "Lucas", edad: 22 };
 const direccion = { ciudad: "Córdoba", pais: "Argentina" };
 
-function mostrarDatos(nombre, ...otrosDatos) {
-  console.log(`Nombre: ${nombre}`);
-  console.log(`Otros datos:`, otrosDatos);
-}
-
 //Usa el spread operator (...) para combinar los objetos persona y 
 // direccion en un solo objeto llamado personaCompleta.
 
 const personaCompleta = {...persona, ...direccion};
-console.log(personaCompleta);
+//console.log(personaCompleta);
 
 //Llama a la función mostrarDatos() pasándole personaCompleta.nombre 
 // y los valores de personaCompleta restantes usando rest (...).
 
-//mostrarDatos(nombre, otrosDatos); //No lo entendi
+function mostrarDatos(nombre, otrosDatos) {
+  console.log(`Nombre: ${nombre}`);
+  console.log(`Otros datos:`, otrosDatos);
+}
+
+const { nombre, ...otrosDatos} = personaCompleta;
+
+mostrarDatos(nombre, otrosDatos); 
 
 //Actividad 4 - Entender cómo se copian los datos primitivos y los objetos.
 
