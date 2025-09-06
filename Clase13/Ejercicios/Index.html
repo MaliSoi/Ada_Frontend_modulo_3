@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Clase 13</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <h2>Actividad 2</h2>
+    <div id="mensaje1">Cargando datos ...</div>
+    <ul id="lista"></ul>
+
+<!--Actividad 3-->
+<br><br>
+<h2>Actividad 3</h2>
+<h1>Crear post</h1>
+
+<form id="post-form">
+<label for="title">Título:</label><br>
+<input type="text" id="title" placeholder="Escribe el título" required><br><br>
+
+<label for="body">Contenido:</label><br>
+<textarea id="body" placeholder="Escribe el contenido" required></textarea><br><br>
+
+<button type="submit">Enviar</button>
+
+</form>
+
+
+<p id="mensaje1"></p>
+
+<!--Actividad 4-->
+<br><br>
+<h2>Actividad 4</h2>
+<h1>Fetch con Manejo de Errores</h1>
+
+  <p id="mensaje2">Cargando datos...</p>
+  <ul id="lista-datos"></ul>
+  <button id="reintentar" style="display:none;">Reintentar</button>
+
+<!--Actividad 5-->
+<br><br><br>
+<h2>Actividad 5</h2>
+<h1>Verificar Post</h1>
+
+  <p id="mensaje3">Cargando...</p>
+
+<script src="./app.js" defer></script>
+
+</body>
+
+</html>
