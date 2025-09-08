@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD con Fetch y Bulma</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">CRUD con MockAPI + Fetch</h1>
+
+      <!-- Formulario Crear Usuario -->
+      <div class="box">
+        <h2 class="subtitle">Agregar Usuario</h2>
+        <form id="userForm">
+          <div class="field">
+            <label class="label">Nombre</label>
+            <input id="name" class="input" type="text" placeholder="Nombre" required>
+          </div>
+          <div class="field">
+            <label class="label">Avatar</label>
+            <input id="avatar" class="input" type="url">
+          </div>
+          <div class="field">
+            <label class="label">País</label>
+            <input id="country" class="input" type="text" placeholder="Ej: Argentina" required>
+          </div>
+          <div class="field">
+            <label class="label">Teléfono</label>
+            <input id="phone" class="input" type="text">
+          </div>
+          <div class="control mt-3">
+            <button id="submitBtn" type="submit" class="button is-primary">Crear</button>
+            <button id="cancelBtn" type="button" class="button is-light is-hidden">Cancelar</button>  
+        </div>
+        </form>
+      </div>
+
+      <!-- Lista de Usuarios -->
+      <div class="box">
+        <h2 class="subtitle">Usuarios</h2>
+        <table class="table is-fullwidth is-striped is-hoverable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Avatar</th>
+              <th>Nombre</th>
+              <th>País</th>
+              <th>Teléfono</th>
+            </tr>
+          </thead>
+          <tbody id="userTable">
+            <!-- Usuarios se cargan acá -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <script src="./app.js"></script>
+</body>
+</html>
